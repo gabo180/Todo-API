@@ -11,7 +11,12 @@ const TodoList = () => {
 	let makeList = todos.map((item, i) => {
 		return (
 			<li key={i}>
-				{item} <button onClick={() => removeTodo(i)}>X</button>
+				{item}{" "}
+				<div className="divButton">
+					<button type="button" onClick={() => removeTodo(i)}>
+						X
+					</button>
+				</div>
 			</li>
 		);
 	});
